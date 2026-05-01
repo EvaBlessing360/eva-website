@@ -1,20 +1,20 @@
 /* ============================================================
    EVA | THE REAL ESTATE QUEEN — Brand Stylesheet
-   Warm & Approachable | Lagos · Ibadan · Ogun
+   Green · Gold · Black | Lagos · Ibadan · Ogun
    ============================================================ */
 
 :root {
-  /* Warm, earthy palette */
-  --color-bg: #FBF7F1;
+  /* Brand palette — green, gold, black */
+  --color-bg: #FAFAF7;
   --color-surface: #FFFFFF;
-  --color-cream: #F5ECDC;
-  --color-terracotta: #C87A4A;
-  --color-terracotta-dark: #A85F32;
-  --color-gold: #D4A657;
-  --color-forest: #3D5A3D;
-  --color-charcoal: #2B2520;
-  --color-muted: #6B5E54;
-  --color-border: #E8DDCC;
+  --color-cream: #F4EFE5;
+  --color-terracotta: #1F4D3A;          /* primary brand green */
+  --color-terracotta-dark: #0F3325;     /* deep green (hover) */
+  --color-gold: #C9A961;                /* luxury gold */
+  --color-forest: #2D5F47;               /* secondary green */
+  --color-charcoal: #0F0F0F;             /* near-black */
+  --color-muted: #6B6B6B;
+  --color-border: #E3DFD6;
   --color-whatsapp: #25D366;
 
   /* Typography */
@@ -233,7 +233,7 @@ p { margin: 0 0 var(--space-sm); }
    HERO
    ============================================================ */
 .hero {
-  background: linear-gradient(135deg, #FBF7F1 0%, #F5ECDC 100%);
+  background: linear-gradient(135deg, #FAFAF7 0%, #F4EFE5 100%);
   padding: var(--space-2xl) 0;
   position: relative;
   overflow: hidden;
@@ -287,7 +287,7 @@ p { margin: 0 0 var(--space-sm); }
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   aspect-ratio: 4 / 5;
-  background: linear-gradient(135deg, #E8DDCC 0%, #D4A657 100%);
+  background: linear-gradient(135deg, #C9A961 0%, #1F4D3A 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,7 +426,7 @@ p { margin: 0 0 var(--space-sm); }
 }
 .listing-image {
   aspect-ratio: 4 / 3;
-  background: linear-gradient(135deg, #D4A657 0%, #C87A4A 100%);
+  background: linear-gradient(135deg, #1F4D3A 0%, #C9A961 100%);
   position: relative;
   display: flex;
   align-items: center;
@@ -643,7 +643,7 @@ p { margin: 0 0 var(--space-sm); }
 .article-body {
   font-size: 1.08rem;
   line-height: 1.85;
-  color: #3a322c;
+  color: #1A1A1A;
 }
 .article-body h2 {
   margin-top: var(--space-xl);
