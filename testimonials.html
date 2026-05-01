@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials | Real Client Reviews | Eva The Real Estate Queen</title>
+<meta name="description" content="What Eva's clients say after the deal closes — WhatsApp messages, Instagram DMs, and LinkedIn recommendations from Nigerian buyers, diaspora investors, and travelers.">
+<link rel="canonical" href="https://therealestatequeen.com.ng/testimonials.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  /* ===== WhatsApp Chat Card ===== */
+  .wa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:2rem;}
+  .wa-card{
+    background:#0B141A;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    display:flex;flex-direction:column;
+    border:1px solid var(--color-border);
+  }
+  .wa-header{
+    background:#075E54;
+    color:#fff;
+    padding:0.85rem 1rem;
+    display:flex;align-items:center;gap:0.75rem;
+  }
+  .wa-back{font-size:1.2rem;opacity:0.9;}
+  .wa-avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;font-size:1rem;flex-shrink:0;
+  }
+  .wa-meta{flex:1;line-height:1.2;}
+  .wa-name{font-weight:600;font-size:0.98rem;}
+  .wa-status{font-size:0.78rem;opacity:0.8;}
+  .wa-icons{display:flex;gap:1rem;font-size:1rem;opacity:0.85;}
+  .wa-body{
+    background:#ECE5DD;
+    background-image:
+      radial-gradient(circle at 20% 35%, rgba(255,255,255,0.4) 0, transparent 30%),
+      radial-gradient(circle at 75% 65%, rgba(255,255,255,0.3) 0, transparent 30%);
+    padding:1rem 0.85rem;
+    flex:1;
+    display:flex;flex-direction:column;gap:0.5rem;
+    min-height:280px;
+  }
+  .wa-day{
+    align-self:center;
+    background:rgba(225,245,254,0.92);
+    color:#54656F;
+    font-size:0.72rem;
+    padding:0.25rem 0.7rem;
+    border-radius:8px;
+    margin:0.2rem 0 0.4rem;
+    box-shadow:0 1px 2px rgba(0,0,0,0.05);
+  }
+  .wa-bubble{
+    max-width:80%;
+    padding:0.55rem 0.7rem 0.45rem;
+    border-radius:8px;
+    font-size:0.92rem;
+    line-height:1.35;
+    color:#111B21;
+    box-shadow:0 1px 1px rgba(0,0,0,0.06);
+    position:relative;
+  }
+  .wa-in{background:#FFFFFF;align-self:flex-start;border-top-left-radius:0;}
+  .wa-out{background:#D9FDD3;align-self:flex-end;border-top-right-radius:0;}
+  .wa-time{
+    display:inline-block;
+    font-size:0.65rem;
+    color:#667781;
+    margin-left:0.4rem;
+    float:right;
+    margin-top:0.2rem;
+  }
+  .wa-tick{color:#53BDEB;font-weight:700;letter-spacing:-2px;margin-left:2px;}
+  .wa-input{
+    background:#F0F2F5;
+    padding:0.6rem 0.85rem;
+    display:flex;align-items:center;gap:0.5rem;
+    color:#8696A0;font-size:0.85rem;
+  }
+  .wa-input-bar{
+    flex:1;background:#fff;border-radius:24px;padding:0.5rem 0.9rem;
+    color:#8696A0;font-size:0.85rem;
+  }
+
+  /* ===== LinkedIn Card ===== */
+  .li-card{
+    background:#fff;border:1px solid #E0E0E0;border-radius:14px;overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);
+  }
+  .li-header{background:#0A66C2;color:#fff;padding:0.85rem 1rem;font-weight:700;display:flex;align-items:center;gap:0.5rem;}
+  .li-body{padding:1.2rem 1.4rem;}
+  .li-author{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.9rem;}
+  .li-pic{
+    width:48px;height:48px;border-radius:50%;
+    background:linear-gradient(135deg,#0A66C2,#004182);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:1.1rem;flex-shrink:0;
+  }
+  .li-name{font-weight:700;font-size:1rem;color:#000;line-height:1.2;}
+  .li-title{font-size:0.85rem;color:#666;}
+  .li-relation{font-size:0.78rem;color:#666;font-style:italic;margin-bottom:0.7rem;}
+  .li-quote{font-size:0.95rem;color:#222;line-height:1.55;}
+
+  /* ===== Instagram Card ===== */
+  .ig-card{
+    background:#fff;border:1px solid #DBDBDB;border-radius:14px;overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);
+  }
+  .ig-header{
+    padding:0.85rem 1rem;display:flex;align-items:center;gap:0.7rem;
+    border-bottom:1px solid #EFEFEF;
+  }
+  .ig-pic{
+    width:36px;height:36px;border-radius:50%;
+    background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);
+    padding:2px;flex-shrink:0;
+  }
+  .ig-pic-inner{
+    width:100%;height:100%;background:#fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#262626;font-weight:700;font-size:0.95rem;
+  }
+  .ig-handle{font-weight:600;font-size:0.92rem;color:#262626;}
+  .ig-time{font-size:0.78rem;color:#8E8E8E;}
+  .ig-body{padding:1rem 1.2rem;background:linear-gradient(135deg,#FAFAFA,#fff);}
+  .ig-bubble{
+    background:linear-gradient(135deg,#FFE9E0,#FFF5EE);
+    border-radius:18px;border-top-left-radius:4px;
+    padding:0.8rem 1rem;color:#262626;font-size:0.93rem;line-height:1.45;
+    margin-bottom:0.8rem;
+  }
+  .ig-actions{display:flex;gap:1rem;font-size:1.1rem;color:#262626;}
+  .ig-actions span:last-child{margin-left:auto;font-size:0.78rem;color:#8E8E8E;align-self:center;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="brand-crown">♛</span> Eva <span style="font-weight:400;color:var(--color-muted);font-size:0.9rem;margin-left:0.3rem;">| The Real Estate Queen</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="listings.html">Listings</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="https://wa.me/2349028719409" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Eva</a></div>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </nav>
+</header>
+
+<section class="blog-header">
+  <div class="container-narrow">
+    <span class="eyebrow">What Clients Say</span>
+    <h1>Straight From the Chat Threads.</h1>
+    <p class="muted" style="font-size:1.1rem;">Most of my work happens inside WhatsApp — which means most of my reviews live there too. Here's a snapshot of the messages clients send after a deal closes, a plot is registered, or a stay wraps up. Names and faces shortened or initialled to protect privacy.</p>
+  </div>
+</section>
+
+<!-- WHATSAPP TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div style="margin-bottom:1.5rem;">
+      <span class="eyebrow">Direct from WhatsApp</span>
+      <h2>Where the Real Closings Happen</h2>
+    </div>
+
+    <div class="wa-grid">
+
+      <!-- WA 1: Diaspora — Land in Lagos -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">‹</span>
+          <div class="wa-avatar">A</div>
+          <div class="wa-meta"><div class="wa-name">Adaeze 🇬🇧</div><div class="wa-status">online</div></div>
+          <div class="wa-icons"><span>📹</span><span>📞</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-day">TODAY</div>
+          <div class="wa-bubble wa-in">Eva, I just got the email. The C of O is in 😭<span class="wa-time">10:42 AM</span></div>
+          <div class="wa-bubble wa-in">From London to Ibeju Lekki in 4 months. I was so scared at the beginning.<span class="wa-time">10:42 AM</span></div>
+          <div class="wa-bubble wa-in">You and your team are amazing. God bless you.<span class="wa-time">10:43 AM</span></div>
+          <div class="wa-bubble wa-out">Thank you Adaeze! 🙏 So happy for you ❤️<span class="wa-time">10:55 AM <span class="wa-tick">✓✓</span></span></div>
+        </div>
+        <div class="wa-input"><div class="wa-input-bar">Message</div><span>🎙️</span></div>
+      </div>
+
+      <!-- WA 2: First-time buyer Lagos -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">‹</span>
+          <div class="wa-avatar" style="background:linear-gradient(135deg,#A85F32,#D4A657);">F</div>
+          <div class="wa-meta"><div class="wa-name">Funke L.</div><div class="wa-status">last seen today at 14:02</div></div>
+          <div class="wa-icons"><span>📹</span><span>📞</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-day">YESTERDAY</div>
+          <div class="wa-bubble wa-in">Sis 👋 I went for the site inspection today.<span class="wa-time">3:17 PM</span></div>
+          <div class="wa-bubble wa-in">Surveyor confirmed everything — the beacons match the survey plan exactly.<span class="wa-time">3:17 PM</span></div>
+          <div class="wa-bubble wa-in">Transferring the balance now. Thank you for being patient with all my questions 🌹<span class="wa-time">3:18 PM</span></div>
+          <div class="wa-bubble wa-out">That's what I'm here for. Welcome to land ownership 👑<span class="wa-time">3:25 PM <span class="wa-tick">✓✓</span></span></div>
+        </div>
+        <div class="wa-input"><div class="wa-input-bar">Message</div><span>🎙️</span></div>
+      </div>
+
+      <!-- WA 3: Farm investor — Houston -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">‹</span>
+          <div class="wa-avatar" style="background:linear-gradient(135deg,#3D5A3D,#A85F32);">+1</div>
+          <div class="wa-meta"><div class="wa-name">+1 832 ••• ••••</div><div class="wa-status">Houston, TX</div></div>
+          <div class="wa-icons"><span>📹</span><span>📞</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-day">LAST WEEK</div>
+          <div class="wa-bubble wa-in">Hi Eva, just received the Q1 harvest update video.<span class="wa-time">9:11 AM</span></div>
+          <div class="wa-bubble wa-in">My farm plot is doing well 🥒🌶️ The cucumbers look amazing.<span class="wa-time">9:11 AM</span></div>
+          <div class="wa-bubble wa-in">When is the next intake? I want to add 2 more plots for my brother.<span class="wa-time">9:12 AM</span></div>
+          <div class="wa-bubble wa-out">Sending the next intake details now. Two plots will be reserved for you 🙏<span class="wa-time">9:34 AM <span class="wa-tick">✓✓</span></span></div>
+        </div>
+        <div class="wa-input"><div class="wa-input-bar">Message</div><span>🎙️</span></div>
+      </div>
+
+      <!-- WA 4: Short-let guest -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">‹</span>
+          <div class="wa-avatar" style="background:linear-gradient(135deg,#C87A4A,#2B2520);">A</div>
+          <div class="wa-meta"><div class="wa-name">Adetoun (VI stay)</div><div class="wa-status">online</div></div>
+          <div class="wa-icons"><span>📹</span><span>📞</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-day">TODAY</div>
+          <div class="wa-bubble wa-in">Just checked into the Lekki apartment 🏡<span class="wa-time">7:22 PM</span></div>
+          <div class="wa-bubble wa-in">It's exactly as you described. Light, water, internet — all working perfectly.<span class="wa-time">7:23 PM</span></div>
+          <div class="wa-bubble wa-in">Concierge picked me up from the airport too. This is the standard 👏👏👏<span class="wa-time">7:23 PM</span></div>
+          <div class="wa-bubble wa-out">Welcome to Lagos 💕 Enjoy your stay!<span class="wa-time">7:30 PM <span class="wa-tick">✓✓</span></span></div>
+        </div>
+        <div class="wa-input"><div class="wa-input-bar">Message</div><span>🎙️</span></div>
+      </div>
+
+      <!-- WA 5: Property seller Ibadan -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">‹</span>
+          <div class="wa-avatar" style="background:linear-gradient(135deg,#2B2520,#A85F32);">T</div>
+          <div class="wa-meta"><div class="wa-name">Engr. Tunde</div><div class="wa-status">Ibadan</div></div>
+          <div class="wa-icons"><span>📹</span><span>📞</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-day">EARLIER THIS MONTH</div>
+          <div class="wa-bubble wa-in">My wife and I closed on the 3-bed yesterday.<span class="wa-time">11:48 AM</span></div>
+          <div class="wa-bubble wa-in">The way you handled the negotiation was masterclass — we got the price we wanted, fast.<span class="wa-time">11:48 AM</span></div>
+          <div class="wa-bubble wa-in">My next plot is on you 😄<span class="wa-time">11:49 AM</span></div>
+          <div class="wa-bubble wa-out">Congrats Engr! 🎉 I'll start sourcing options for the next one.<span class="wa-time">12:10 PM <span class="wa-tick">✓✓</span></span></div>
+        </div>
+        <div class="wa-input"><div class="wa-input-bar">Message</div><span>🎙️</span></div>
+      </div>
+
+      <!-- WA 6: Investment club -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">‹</span>
+          <div class="wa-avatar" style="background:linear-gradient(135deg,#3D5A3D,#075E54);">K</div>
+          <div class="wa-meta"><div class="wa-name">Kunle 🇨🇦</div><div class="wa-status">Investment Club Lead</div></div>
+          <div class="wa-icons"><span>📹</span><span>📞</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-day">LAST MONTH</div>
+          <div class="wa-bubble wa-in">12 of us pooled funds — you remember.<span class="wa-time">8:02 AM</span></div>
+          <div class="wa-bubble wa-in">Every member's title doc is now in their own name. We can't thank you enough.<span class="wa-time">8:02 AM</span></div>
+          <div class="wa-bubble wa-in">You are God-sent. Already telling our other co-workers in Toronto about you.<span class="wa-time">8:03 AM</span></div>
+          <div class="wa-bubble wa-out">This made my morning 🙏 Glad to support the whole group.<span class="wa-time">8:18 AM <span class="wa-tick">✓✓</span></span></div>
+        </div>
+        <div class="wa-input"><div class="wa-input-bar">Message</div><span>🎙️</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LINKEDIN -->
+<section class="section" style="background:var(--color-cream);">
+  <div class="container">
+    <div style="margin-bottom:1.5rem;">
+      <span class="eyebrow">From LinkedIn</span>
+      <h2>Public Recommendation</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,500px));gap:1.5rem;">
+      <div class="li-card">
+        <div class="li-header">in &nbsp;Recommendation</div>
+        <div class="li-body">
+          <div class="li-author">
+            <div class="li-pic">CO</div>
+            <div>
+              <div class="li-name">Chinedu O.</div>
+              <div class="li-title">Director, Family Office · Lagos</div>
+            </div>
+          </div>
+          <div class="li-relation">Chinedu worked with Eva on multiple acquisitions.</div>
+          <div class="li-quote">"I've worked with Blessing (Eva) on three separate land acquisitions for our family office across Lagos and Ibadan. She combines real legal training with on-the-ground hustle — every title was clean, every document timeline was met, and she has the rare habit of saying 'don't buy this one' when something doesn't add up. That's the kind of advisor you keep."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="section">
+  <div class="container">
+    <div style="margin-bottom:1.5rem;">
+      <span class="eyebrow">From Instagram DMs</span>
+      <h2>Quick Notes &amp; Story Mentions</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+
+      <div class="ig-card">
+        <div class="ig-header">
+          <div class="ig-pic"><div class="ig-pic-inner">N</div></div>
+          <div style="flex:1;">
+            <div class="ig-handle">ngozi_e</div>
+            <div class="ig-time">DM · 2 days ago</div>
+          </div>
+        </div>
+        <div class="ig-body">
+          <div class="ig-bubble">"Eva!! Got the keys today 🔑 our first home in Lagos. Thank you for not letting us settle. The duplex is everything 🥹"</div>
+          <div class="ig-actions"><span>❤️</span><span>💬</span><span>Replied</span></div>
+        </div>
+      </div>
+
+      <div class="ig-card">
+        <div class="ig-header">
+          <div class="ig-pic"><div class="ig-pic-inner">D</div></div>
+          <div style="flex:1;">
+            <div class="ig-handle">damilare.travels</div>
+            <div class="ig-time">Story mention · 5 days ago</div>
+          </div>
+        </div>
+        <div class="ig-body">
+          <div class="ig-bubble">"Coming home for Christmas? @is_evablessing has the cleanest short-let plug in Lagos. Just stayed in Ikoyi — chef's kiss 👌"</div>
+          <div class="ig-actions"><span>❤️</span><span>↗️</span><span>Story repost</span></div>
+        </div>
+      </div>
+
+      <div class="ig-card">
+        <div class="ig-header">
+          <div class="ig-pic"><div class="ig-pic-inner">M</div></div>
+          <div style="flex:1;">
+            <div class="ig-handle">mr.morenikeji</div>
+            <div class="ig-time">DM · last week</div>
+          </div>
+        </div>
+        <div class="ig-body">
+          <div class="ig-bubble">"My plot in Alabata is producing already 🍅🌶️ Got my first revenue alert today. This is real. Thank you Eva 🙏🏾"</div>
+          <div class="ig-actions"><span>❤️</span><span>💬</span><span>Replied</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY NOTE -->
+<section class="section" style="background:var(--color-cream);">
+  <div class="container-narrow text-center">
+    <span class="eyebrow">A Note on Privacy</span>
+    <h2 style="font-size:1.6rem;">Names initialled where requested.</h2>
+    <p class="muted">Many clients — especially diaspora investors — prefer to keep their full names off public testimonials. I respect that. If you want to verify a deal directly, I'm happy to connect you with past clients who have agreed to take reference calls.</p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Want To Be The Next Story?</h2>
+    <p>Send me a message — I'll listen first, advise honestly, and only move when the deal is right for you.</p>
+    <a href="https://wa.me/2349028719409?text=Hi%20Eva%2C%20I%27d%20like%20to%20start%20a%20conversation." class="btn btn-primary btn-lg" target="_blank" rel="noopener">Chat on WhatsApp</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand">♛ Eva</div><p>Your Connector to Real Estate Opportunities.</p><div class="socials"><a href="https://instagram.com/is_evablessing" class="social-icon" target="_blank" rel="noopener">IG</a><a href="https://wa.me/2349028719409" class="social-icon" target="_blank" rel="noopener">WA</a><a href="mailto:Blessingcollins360@gmail.com" class="social-icon">@</a></div></div>
+      <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="listings.html">Listings</a></li></ul></div>
+      <div><h4>Learn</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Get In Touch</h4><ul><li>📞 <a href="tel:+2349028719409">+234 902 871 9409</a></li><li>💬 <a href="https://wa.me/2349028719409" target="_blank" rel="noopener">WhatsApp</a></li><li>✉️ <a href="mailto:Blessingcollins360@gmail.com">Blessingcollins360@gmail.com</a></li><li>📍 Lagos · Ibadan · Ogun</li></ul></div>
+    </div>
+    <div class="footer-bottom">© 2026 Eva | The Real Estate Queen (Blessing Collins). All rights reserved. · Marketed by <strong>Terrax Properties Limited</strong>.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2349028719409" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
