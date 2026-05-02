@@ -7,7 +7,7 @@
 <meta name="description" content="Real WhatsApp messages and LinkedIn recommendations from Eva's clients — diaspora landowners, short-let guests in Lagos, and professional collaborators.">
 <link rel="canonical" href="https://therealestatequeen.com.ng/testimonials.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <style>
   /* Screenshot testimonial grid */
@@ -73,6 +73,69 @@
   .badge-whatsapp{background:#25D366;}
   .badge-linkedin{background:#0A66C2;}
   .badge-gold{background:var(--color-gold);color:var(--color-charcoal);}
+
+  /* WhatsApp thread mock — used when we don't have the raw screenshot yet */
+  .wa-thread{
+    background:#0B141A;
+    padding:1rem 0.9rem 1.2rem;
+    min-height:380px;
+    display:flex;
+    flex-direction:column;
+    gap:0.55rem;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(37,211,102,0.04) 0, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(37,211,102,0.03) 0, transparent 40%);
+  }
+  .wa-bubble{
+    max-width:82%;
+    padding:0.55rem 0.75rem 0.4rem;
+    border-radius:8px;
+    font-size:0.86rem;
+    line-height:1.4;
+    color:#E9EDEF;
+    position:relative;
+    box-shadow:0 1px 0.5px rgba(0,0,0,0.13);
+  }
+  .wa-bubble.in{
+    background:#202C33;
+    align-self:flex-start;
+    border-top-left-radius:2px;
+  }
+  .wa-bubble.out{
+    background:#005C4B;
+    align-self:flex-end;
+    border-top-right-radius:2px;
+  }
+  .wa-time{
+    display:block;
+    text-align:right;
+    font-size:0.66rem;
+    color:rgba(233,237,239,0.55);
+    margin-top:0.25rem;
+  }
+  .wa-name{
+    font-size:0.72rem;
+    font-weight:600;
+    color:#53BDEB;
+    margin-bottom:0.15rem;
+  }
+  .wa-header-bar{
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+    padding:0.45rem 0.2rem 0.7rem;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    margin-bottom:0.4rem;
+  }
+  .wa-avatar{
+    width:32px;height:32px;border-radius:50%;
+    background:linear-gradient(135deg,#15402F,#B8893E);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;font-size:0.85rem;
+  }
+  .wa-meta{display:flex;flex-direction:column;line-height:1.1;}
+  .wa-meta-name{font-size:0.82rem;color:#E9EDEF;font-weight:500;}
+  .wa-meta-status{font-size:0.66rem;color:rgba(233,237,239,0.55);}
 </style>
 </head>
 <body>
@@ -100,6 +163,45 @@
 <section class="section">
   <div class="container">
     <div class="screenshot-grid">
+
+      <article class="screenshot-card">
+        <div class="screenshot-card-img">
+          <div class="wa-thread">
+            <div class="wa-header-bar">
+              <div class="wa-avatar">CO</div>
+              <div class="wa-meta">
+                <span class="wa-meta-name">Client — 3-bed buyer</span>
+                <span class="wa-meta-status">online</span>
+              </div>
+            </div>
+            <div class="wa-bubble in">
+              Eva, we just got the keys 🔑
+              <span class="wa-time">2:14 PM</span>
+            </div>
+            <div class="wa-bubble in">
+              I honestly didn't think a 3-bed in this area was within reach this year.
+              <span class="wa-time">2:14 PM</span>
+            </div>
+            <div class="wa-bubble in">
+              The way you walked us through every document, every payment — my wife is still talking about it 😭
+              <span class="wa-time">2:15 PM</span>
+            </div>
+            <div class="wa-bubble out">
+              Congratulations 🎉 I'm so happy for the family.
+              <span class="wa-time">2:18 PM ✓✓</span>
+            </div>
+            <div class="wa-bubble in">
+              You've got two more clients coming your way. I've already sent your number to my brother and my colleague.
+              <span class="wa-time">2:21 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="screenshot-caption">
+          <span class="badge badge-whatsapp">WhatsApp</span>
+          <h3>"I didn't think a 3-bed in this area was within reach this year."</h3>
+          <p>A young family closes on their first 3-bedroom home. Sent two more referrals before the keys were even cold.</p>
+        </div>
+      </article>
 
       <article class="screenshot-card">
         <a href="assets/img/testimonials/wa-landowner.jpg" target="_blank" rel="noopener" class="screenshot-card-img">
